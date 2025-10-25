@@ -1,6 +1,9 @@
 name: Production deploy
 
 on:
+  push:
+    branches:
+      - main
   repository_dispatch:
     types:
       - deploy-production
@@ -26,7 +29,7 @@ jobs:
       - name: Deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GENTLE_FOREST_01F461703 }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ICY_WAVE_06AC07403 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: 'upload'
           app_location: 'dist'
