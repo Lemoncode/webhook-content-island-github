@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Production
-      url: https://gentle-forest-01f461703.3.azurestaticapps.net
+      url: https://icy-wave-06ac07403.3.azurestaticapps.net
 
     steps:
       - uses: actions/checkout@v4
