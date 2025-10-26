@@ -4,6 +4,7 @@ import type { Post } from './post-collection.model';
 export const getAllPosts = async () =>
   await client.getContentList<Post>({
     contentType: 'Post',
+    language: 'en',
     sort: { 'fields.date': 'desc' },
-    pagination: { take: 6 }
+    pagination: { take: 6 },
   });
